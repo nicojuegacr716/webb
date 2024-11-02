@@ -125,7 +125,7 @@ function DrawingLib.createLine()
 			end
 
 			if index == "From" or index == "To" then
-				local direction = (index == "From" and lineObj.To or value) - (index == "From" and value or lineObj.From)
+				local direction = (index == "To" and lineObj.To or value) - (index == "From" and value or lineObj.From)
 				local center = (lineObj.To + lineObj.From) / 2
 				local distance = direction.Magnitude
 				local theta = math.deg(math.atan2(direction.Y, direction.X))
